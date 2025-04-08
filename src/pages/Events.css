@@ -1,0 +1,185 @@
+:root {
+    --main-background-color:#d2fdff;
+    --primary-color:#96dbf6;
+    --gallery-color:#418195;
+    --text-color:rgb(0, 0, 0);
+    --secondary-text-color:rgb(49, 112, 163);
+    --link-color:rgb(62, 118, 183);
+}
+
+body{
+    background-color:var(--main-background-color);
+    text-decoration:none;
+    margin:0;
+    font-family:sans-serif;
+}
+
+.header{
+    width:100%;
+    background-color:var(--gallery-color);
+    padding:10px;
+}
+
+.header h2{
+    margin-top:0;
+    padding-top:10px;
+    padding-bottom:0px;
+    font-size:50px;
+    margin-left:5%;
+} 
+
+.header h3{
+    margin-top:0;
+    margin-left:5%;
+    background-color:var(--main-background-color);
+    width:14%;
+    padding:10px;
+    font-size:20px;
+    color:var(--secondary-text-color);
+}
+
+.header h4{
+    position:absolute;
+    top:5%;
+    right:5%;
+    font-size:30px;
+    background-color:var(--main-background-color);
+    padding:15px;
+}
+
+a{
+    text-decoration:none;
+    list-style: none;
+    list-style-type: none;
+}
+
+#main-nav{
+    background-color:var(--primary-color);
+    width:90%;
+    text-align:center;
+    margin:auto;
+    border-radius:50px;
+    margin-top:30px;
+}
+
+#main-nav ul{
+    list-style-type:none;
+    padding-left:0;
+    padding-top:10px;
+    padding-bottom:10px;
+}
+
+#main-nav ul li{
+    text-decoration:none;
+    font-size:50px;
+}
+
+#main-nav ul li a{
+    color:var(--text-color);
+}
+
+#main-nav ul li #events{
+    color:var(--link-color);
+    text-decoration:underline 3px;
+}
+
+#title{
+    text-align:center;
+    margin:auto;
+    background-color:var(--gallery-color);
+    width:95%;
+    border-radius:30px;
+    padding-top:15px;
+    padding-bottom:15px;
+    font-size:75px;
+    margin-top:30px;
+}
+
+
+/* Main css for the About page */
+
+.flexbox{
+    width:95%;
+    text-align:center;
+    margin-top:40px;
+}
+
+.flexbox .text {
+    flex: 1;
+    text-align: left;
+}
+
+.box1 {
+    background-color: var(--primary-color);
+    margin-bottom:0;
+    padding:10px;
+    margin-right:30px;
+    border-radius: 30px;
+}
+
+.box1 img {
+    display: block;
+    padding:10px;
+}
+
+.box2 {
+    background-color: var(--primary-color);
+    padding:10px;
+    border-radius: 30px;
+}
+
+.box2 img {
+    display: block;
+    padding:10px;
+}
+
+.box1 h3, .box1 p, .box2 h3, .box2 p{
+    margin:0;
+}
+
+.box1 .text {
+    flex: 1;
+    text-align: left;
+    margin-left:3%;
+    margin-top: 3%;
+}
+
+.box2 .text{
+    flex: 1;
+    text-align: right;
+    margin-left:3%;
+    margin-top: 3%;
+}
+
+.box1 h3, .box2 h3{
+    font-size: 50px;
+    text-align:center;
+}
+
+.box1 p, .box2 p{
+    font-size:20px;
+    margin-top:20px;
+    letter-spacing: 2px;
+    text-align:left;
+}
+
+@media only screen and (min-width: 768px) {
+    #main-nav ul, .flexbox{
+      display: flex;
+    }
+  
+    #main-nav li, .flexbox .text{
+      flex: 1;
+    }
+
+    .main{
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    #main-nav{
+        display:none;
+    }
+}

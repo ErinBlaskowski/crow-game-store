@@ -1,0 +1,8 @@
+.form{
+    text-wrap: nowraps;
+    display:grid;
+    width:10%;
+    margin-left:45%;
+    margin-bottom:20px;
+    text-align:center;
+}
