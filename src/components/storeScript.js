@@ -1,7 +1,7 @@
-{/* Not yet implemented:
+/*const storeProducts = () => {
 
 const getProducts = async () => {
-    const url = "https://raw.githubusercontent.com/ErinBlaskowski/ErinBlaskowski.github.io/refs/heads/main/csce242/json/products.json"
+    const url = "https://gamestore-backend-kaxi.onrender.com/api/products-json"
     try{
         const response = await fetch(url);
         return await response.json();
@@ -34,7 +34,7 @@ const getProductItem = product => {
 
     return gridItem;
 }
+    window.onload(showProducts);
+}
 
-window.onload = () => showProducts();
-
-*/}
+export default storeProducts; */

@@ -2,6 +2,8 @@ import "./About.css";
 import crowsForWebsite from "../images/CrowsForWebsite.png";
 import meetTheTeam from "../images/MeetTheTeam.png";
 
+import Contact from "../components/contact.jsx";
+
 const About = () => {
     return (
         <>
@@ -39,8 +41,9 @@ const About = () => {
             </div>
         </footer>
 
-        
-
+        <section>
+            <Contact />
+        </section>
         </>
     )
 };

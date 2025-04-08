@@ -16,8 +16,8 @@ const Layout = () => {
 
   return (
     <>
-        <section class="header">
-            <section class="login">
+        <section className="header">
+            <section className="login">
                 <h2>Sign In</h2>
                 <h3 id="input">Enter Username</h3>
                 <h3 id="input">Enter Password</h3>
@@ -28,10 +28,10 @@ const Layout = () => {
         </section>
         <nav id="main-nav">
             <ul>
-                <li><a id="home" href="/">Home</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/store">Store</a></li>
-                <li><a href="/events">Events</a></li>
+                <li><a id="home" href="/crow-game-store/">Home</a></li>
+                <li><a href="/crow-game-store/about">About</a></li>
+                <li><a href="/crow-game-store/store">Store</a></li>
+                <li><a href="/crow-game-store/events">Events</a></li>
             </ul>
         </nav>
         <h1 id="title">CrowPing Games</h1>
