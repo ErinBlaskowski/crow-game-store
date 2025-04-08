@@ -8,6 +8,8 @@ import setOfEightPuzzles from "../images/SetOfEightPuzzles.jpeg";
 
 const Home = () => {
     {/*
+        adding this so there is a change 
+        
         const [menuUopen, setMenuOpen] = useState(false);
 
         const toggleMenu = () => {
