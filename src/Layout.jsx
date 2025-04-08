@@ -8,7 +8,7 @@ const Layout = () => {
             setMenuOpen(!menuOpen);
         }
 
-        in return in main nav:
+        in return in main nav: 
 
         <button>Menu</button>
         
