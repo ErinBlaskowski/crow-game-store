@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/crow-game-store/static/css/main.f855e6bc.css",
+    "main.js": "/crow-game-store/static/js/main.407b463d.js",
+    "static/js/453.a83cbf58.chunk.js": "/crow-game-store/static/js/453.a83cbf58.chunk.js",
+    "static/media/logo.svg": "/crow-game-store/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/crow-game-store/index.html",
+    "main.f855e6bc.css.map": "/crow-game-store/static/css/main.f855e6bc.css.map",
+    "main.407b463d.js.map": "/crow-game-store/static/js/main.407b463d.js.map",
+    "453.a83cbf58.chunk.js.map": "/crow-game-store/static/js/453.a83cbf58.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f855e6bc.css",
+    "static/js/main.407b463d.js"
+  ]
+}
