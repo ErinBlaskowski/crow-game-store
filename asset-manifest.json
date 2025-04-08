@@ -1,28 +1,23 @@
 {
   "files": {
-    "main.css": "/crow-game-store/static/css/main.2cc3655d.css",
-    "main.js": "/crow-game-store/static/js/main.74b0f48a.js",
+    "main.css": "/crow-game-store/static/css/main.c4252d25.css",
+    "main.js": "/crow-game-store/static/js/main.37be6f0f.js",
     "static/media/SetOfEightPuzzles.jpeg": "/crow-game-store/static/media/SetOfEightPuzzles.96f578f5f55146b4cfc2.jpeg",
     "static/media/DiceTrayGame.png": "/crow-game-store/static/media/DiceTrayGame.844910785a562cadc9f0.png",
     "static/media/Product.png": "/crow-game-store/static/media/Product.ff8f0021c76d7ae1c41e.png",
     "static/media/Dominos.png": "/crow-game-store/static/media/Dominos.c758bad86a37a861ead3.png",
-    "static/media/VirtualHeadset.png": "/crow-game-store/static/media/VirtualHeadset.962ba5767b747c063760.png",
     "static/media/MeetTheTeam.png": "/crow-game-store/static/media/MeetTheTeam.6cca3663d360d3914c58.png",
-    "static/media/MedievalChessSet.png": "/crow-game-store/static/media/MedievalChessSet.d76a56f2c3d2db9ffea8.png",
     "static/media/FunkyChessSet.png": "/crow-game-store/static/media/FunkyChessSet.cb7c1eef7840c654bdcd.png",
     "static/media/CrowsForWebsite.png": "/crow-game-store/static/media/CrowsForWebsite.57c2a4583ad5f50cb890.png",
     "static/media/DiceGames.jpeg": "/crow-game-store/static/media/DiceGames.3f1075479e6a4d70b5b8.jpeg",
-    "static/media/BicycleCardSet.png": "/crow-game-store/static/media/BicycleCardSet.069a33f17187aab283b2.png",
-    "static/media/Monopoly.png": "/crow-game-store/static/media/Monopoly.cbd844ebe6f44d25f48e.png",
     "static/media/CardGameGroup.png": "/crow-game-store/static/media/CardGameGroup.7a2b80b339538a77493f.png",
     "static/media/DiceSet.png": "/crow-game-store/static/media/DiceSet.9900a6e72042e4bf6ad2.png",
-    "static/media/RedDiceSet.png": "/crow-game-store/static/media/RedDiceSet.ed7bc71679466e7f848d.png",
     "index.html": "/crow-game-store/index.html",
-    "main.2cc3655d.css.map": "/crow-game-store/static/css/main.2cc3655d.css.map",
-    "main.74b0f48a.js.map": "/crow-game-store/static/js/main.74b0f48a.js.map"
+    "main.c4252d25.css.map": "/crow-game-store/static/css/main.c4252d25.css.map",
+    "main.37be6f0f.js.map": "/crow-game-store/static/js/main.37be6f0f.js.map"
   },
   "entrypoints": [
-    "static/css/main.2cc3655d.css",
-    "static/js/main.74b0f48a.js"
+    "static/css/main.c4252d25.css",
+    "static/js/main.37be6f0f.js"
   ]
 }
