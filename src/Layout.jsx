@@ -28,10 +28,10 @@ const Layout = () => {
         </section>
         <nav id="main-nav">
             <ul>
-                <li><a id="home" href="/crow-game-store/">Home</a></li>
-                <li><a href="/crow-game-store/about">About</a></li>
-                <li><a href="/crow-game-store/store">Store</a></li>
-                <li><a href="/crow-game-store/events">Events</a></li>
+                <li><Link id="home" to="/">Home</Link></li>
+                <li><Link to="/about">About</Link></li>
+                <li><Link to="/store">Store</Link></li>
+                <li><Link to="/events">Events</Link></li>
             </ul>
         </nav>
         <h1 id="title">CrowPing Games</h1>
