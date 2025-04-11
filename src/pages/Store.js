@@ -9,7 +9,7 @@ const Store = () => {
   useEffect(() => {
     (async () => {
       try {
-        const response = await axios.get("/api/products-json");
+        const response = await axios.get("https://gamestore-backend-kaxi.onrender.com/api/products-json");
         console.log("Fetched products:", response.data);
         setProducts(response.data);
       } catch (error) {
