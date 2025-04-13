@@ -12,7 +12,7 @@ const Products = ({ name, price, img_name, features = [] }) => {
           height="150"
           onError={(e) => {
             e.target.onerror = null;
-            e.target.src = "/fallback-image.png"; // optional
+            e.target.src = "/fallback-image.png"; 
           }}
         />
       </div>
