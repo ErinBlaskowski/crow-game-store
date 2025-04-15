@@ -1,20 +1,13 @@
-import "../product.css";
+import "./dialog.css";
 import React, { useState } from "react";
 
 const AddProduct = (props) => {
-  const [inputs, setInputs] = useState({});
   const [result, setResult] = useState("");
-
-  const handleChange = (event) => {
-    const name = event.target.name;
-    const value = event.target.value;
-    setInputs((values) => ({ ...values, [name]: value }));
-  };
+  const [imgSrc, setImgSrc] = useState("");
 
   const handleImageChange = (event) => {
-    const name = event.target.name;
-    const value = event.target.files[0];
-    setInputs((values) => ({ ...values, [name]: value }));
+    setImgSrc(URL.createObjectURL(event.target.files[0]))
+    
   };
 
   const onSubmit = async (event) => {
@@ -22,18 +15,18 @@ const AddProduct = (props) => {
     setResult("Sending....");
     const formData = new FormData(event.target);
 
-    const response = await fetch("http://localhost:3002/api/houses/", {
+    const response = await fetch("https://gamestore-backend-kaxi.onrender.com/api/store", {
       method: "POST",
       body: formData,
     });
 
     if (response.status === 200) {
-      setResult("House Successfully Added");
-      event.target.reset(); //reset your form fields
-      props.addHousePlan(await response.json());
+      setResult("Product Successfully Added");
+      event.target.reset(); 
+      props.addProductPlan(await response.json());
       props.closeProduct();
     } else {
-      console.log("Error adding house", response);
+      console.log("Error adding product", response);
       setResult(response.message);
     }
   };
@@ -49,61 +42,36 @@ const AddProduct = (props) => {
           >
             &times;
           </span>
-          <form id="add-property-form" onSubmit={onSubmit}>
+          <form id="add-product-form" onSubmit={onSubmit}>
             <p>
-              <label htmlFor="name ">Property Name:</label>
+              <label htmlFor="name ">Product Name:</label>
               <input
                 type="text"
                 id="name"
                 name="name"
-                value={inputs.name || ""}
-                onChange={handleChange}
                 required
               />
             </p>
             <p>
-              <label htmlFor="size">Size:</label>
+              <label htmlFor="price ">Product Price:</label>
               <input
                 type="number"
-                id="size"
-                name="size"
-                value={inputs.size || ""}
-                onChange={handleChange}
-                required
-              />
-            </p>
-            <p>
-              <label htmlFor="bedrooms">Bedrooms:</label>
-              <input
-                type="number"
-                id="bedrooms"
-                name="bedrooms"
-                value={inputs.bedrooms || ""}
-                onChange={handleChange}
-                required
-              />
-            </p>
-            <p>
-              <label htmlFor="bathrooms">Bathrooms:</label>
-              <input
-                type="number"
-                id="bathrooms"
-                name="bathrooms"
-                value={inputs.bathrooms || ""}
-                onChange={handleChange}
+                id="price"
+                name="price"
                 required
               />
             </p>
 
             <section className="columns">
               <p id="img-prev-section">
-                <img
+                {imgSrc?(
+                  <img
                   id="img-prev"
-                  src={
-                    inputs.img != null ? URL.createObjectURL(inputs.img) : ""
-                  }
+                  src={imgSrc}
                   alt=""
                 />
+                ):("")}
+                
               </p>
               <p id="img-upload">
                 <label htmlFor="img">Upload Image:</label>

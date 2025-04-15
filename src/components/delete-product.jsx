@@ -1,22 +1,22 @@
-import "../product.css";
+import "./dialog.css";
 import React, { useState } from "react";
 
 const DeleteProduct = (props) => {
   const [result, setResult] = useState("");
 
-  const deleteHousePlan = async (event) => {
+  const deleteProductPlan = async (event) => {
     const response = await fetch(
-      `http://localhost:3002/api/houses/${props._id}`,
+      `https://gamestore-backend-kaxi.onrender.com/api/products-json/${props._id}`,
       {
         method: "DELETE",
       }
     );
 
     if (response.status === 200) {
-      setResult("House Plan Successfully deleted");
-      props.hideHousePlan();
+      setResult("Product Plan Successfully deleted");
+      props.hideProductPlan();
     } else {
-      console.log("Error deleting house", response);
+      console.log("Error deleting product", response);
       setResult(response.message);
     }
 
@@ -37,7 +37,7 @@ const DeleteProduct = (props) => {
           <div id="delete-content">
             <h3>Are you sure you want to delete the {props.name}</h3>
             <section>
-              <button onClick={deleteHousePlan}>Yes</button>
+              <button onClick={deleteProductPlan}>Yes</button>
               <button onClick={props.closeProduct}>No</button>
             </section>
             <span>{result}</span>

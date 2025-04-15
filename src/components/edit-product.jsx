@@ -1,14 +1,12 @@
-import "../styles/product.css";
+import "./dialog.css";
 import React, { useState } from "react";
 
 const EditProduct = (props) => {
   const [inputs, setInputs] = useState({
     _id: props._id,
     name: props.name,
-    size: props.size,
-    bedrooms: props.bedrooms,
-    bathrooms: props.bathrooms,
-    prev_img: props.main_image,
+    price: props.price,
+    prev_img: props.img_name,
   });
 
   const handleChange = (event) => {
@@ -31,7 +29,7 @@ const EditProduct = (props) => {
     const formData = new FormData(event.target);
 
     const response = await fetch(
-      `http://localhost:3002/api/houses/${props._id}`,
+      `https://gamestore-backend-kaxi.onrender.com/api/products-json/${props._id}`,
       {
         method: "PUT",
         body: formData,
@@ -39,12 +37,12 @@ const EditProduct = (props) => {
     );
 
     if (response.status === 200) {
-      setResult("House Successfully updated");
+      setResult("Product Successfully updated");
       event.target.reset(); //reset your form fields
-      props.editHousePlan(await response.json());
+      props.editProductPlan(await response.json());
       props.closeProduct();
     } else {
-      console.log("Error editing house", response);
+      console.log("Error editing product", response);
       setResult(response.message);
     }
   };
