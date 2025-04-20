@@ -1,31 +1,31 @@
 import "./product.css";
 import React, { useState } from "react";
-import AddDialog from "./add-product.jsx";
-import EditDialog from "./edit-product.jsx";
-import DeleteDialog from "./delete-product.jsx";
+import AddProduct from "./add-product.jsx";
+import EditProduct from "./edit-product.jsx";
+import DeleteProduct from "./delete-product.jsx";
 
 const ProductPlan = (props) => {
-  const [showEditDialog, setShowEditDialog] = useState(false);
-  const [showDeleteDialog, setShowDeleteDialog] = useState(false);
+  const [showEditProduct, setShowEditProduct] = useState(false);
+  const [showDeleteProduct, setShowDeleteProduct] = useState(false);
   const [showProductPlan, setShowProductPlan] = useState(true);
   const [productPlan, setProductPlan] = useState(props);
 
   const imageSrc = `https://gamestore-backend-kaxi.onrender.com${productPlan.img_name}`;
 
-  const openEditDialog = () => {
-    setShowEditDialog(true);
+  const openEditProduct = () => {
+    setShowEditProduct(true);
   };
 
-  const closeEditDialog = () => {
-    setShowEditDialog(false);
+  const closeEditProduct = () => {
+    setShowEditProduct(false);
   };
 
-  const openDeleteDialog = () => {
-    setShowDeleteDialog(true);
+  const openDeleteProduct = () => {
+    setShowDeleteProduct(true);
   };
 
-  const closeDeleteDialog = () => {
-    setShowDeleteDialog(false);
+  const closeDeleteProduct = () => {
+    setShowDeleteProduct(false);
   };
 
   const editProductPlan = (productPlan) => {
@@ -40,9 +40,9 @@ const ProductPlan = (props) => {
     <>
       {showProductPlan ? (
         <div>
-          {showEditDialog ? (
-            <EditDialog
-              closeDialog={closeEditDialog}
+          {showEditProduct ? (
+            <EditProduct
+              closeProduct={closeEditProduct}
               editProductPlan={editProductPlan}
               _id={productPlan._id}
               name={productPlan.name}
@@ -53,9 +53,9 @@ const ProductPlan = (props) => {
             ""
           )}
 
-          {showDeleteDialog ? (
-            <DeleteDialog
-              closeDialog={closeDeleteDialog}
+          {showDeleteProduct ? (
+            <DeleteProduct
+              closeProduct={closeDeleteProduct}
               hideProductPlan={hideProductPlan}
               _id={productPlan._id}
               name={productPlan.name}
@@ -71,10 +71,10 @@ const ProductPlan = (props) => {
               <header className="columns">
                 <h3>{productPlan.name}</h3>
                 <section id="change-buttons">
-                  <a href="#" onClick={openEditDialog}>
+                  <a href="#" onClick={openEditProduct}>
                     &#9998;
                   </a>
-                  <a href="#" onClick={openDeleteDialog}>
+                  <a href="#" onClick={openDeleteProduct}>
                     &#x2715;
                   </a>
                 </section>

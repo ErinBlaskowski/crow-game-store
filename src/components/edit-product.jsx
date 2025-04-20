@@ -38,7 +38,7 @@ const EditProduct = (props) => {
 
     if (response.status === 200) {
       setResult("Product Successfully updated");
-      event.target.reset(); //reset your form fields
+      event.target.reset(); 
       props.editProductPlan(await response.json());
       props.closeProduct();
     } else {
@@ -60,7 +60,7 @@ const EditProduct = (props) => {
           </span>
           <form id="edit-property-form" onSubmit={onSubmit}>
             <p>
-              <label htmlFor="name ">Property Name:</label>
+              <label htmlFor="name">Product Name:</label>
               <input
                 type="text"
                 id="name"
@@ -71,34 +71,12 @@ const EditProduct = (props) => {
               />
             </p>
             <p>
-              <label htmlFor="size">Size:</label>
+              <label htmlFor="price">Price:</label>
               <input
                 type="number"
-                id="size"
-                name="size"
+                id="price"
+                name="price"
                 value={inputs.size || ""}
-                onChange={handleChange}
-                required
-              />
-            </p>
-            <p>
-              <label htmlFor="bedrooms">Bedrooms:</label>
-              <input
-                type="number"
-                id="bedrooms"
-                name="bedrooms"
-                value={inputs.bedrooms || ""}
-                onChange={handleChange}
-                required
-              />
-            </p>
-            <p>
-              <label htmlFor="bathrooms">Bathrooms:</label>
-              <input
-                type="number"
-                id="bathrooms"
-                name="bathrooms"
-                value={inputs.bathrooms || ""}
                 onChange={handleChange}
                 required
               />
@@ -112,7 +90,7 @@ const EditProduct = (props) => {
                     inputs.img != null
                       ? URL.createObjectURL(inputs.img)
                       : inputs.prev_img != null
-                      ? `http://localhost:3002/${inputs.prev_img}`
+                      ? `https://gamestore-backend-kaxi.onrender.com/${inputs.prev_img}`
                       : ""
                   }
                   alt=""
