@@ -10,8 +10,6 @@ const ProductPlan = (props) => {
   const [showProductPlan, setShowProductPlan] = useState(true);
   const [productPlan, setProductPlan] = useState(props);
 
-  const imageSrc = `https://gamestore-backend-kaxi.onrender.com${productPlan.img_name}`;
-
   const openEditProduct = () => {
     setShowEditProduct(true);
   };
@@ -32,7 +30,7 @@ const ProductPlan = (props) => {
     setProductPlan(productPlan);
   };
 
-  const hideProductPlan = (productPlan) => {
+  const hideProductPlan = () => {
     setShowProductPlan(false);
   };
 
@@ -65,7 +63,7 @@ const ProductPlan = (props) => {
           )}
           <section className="product-plan columns">
             <section className="feature-image">
-              <img src={imageSrc} alt={productPlan.name} />
+              <img src={"https://gamestore-backend-kaxi.onrender.com" + productPlan.img_name} alt={productPlan.name} />
             </section>
             <section className="info">
               <header className="columns">
@@ -80,7 +78,7 @@ const ProductPlan = (props) => {
                 </section>
               </header>
 
-              <p>Size: {productPlan.price}</p>
+              <p>Price: {productPlan.price}</p>
             </section>
           </section>
         </div>

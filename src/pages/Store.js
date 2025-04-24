@@ -12,7 +12,7 @@ const Store = () => {
   useEffect(() => {
     (async () => {
       try {
-        const response = await axios.get("https://gamestore-backend-kaxi.onrender.com/api/products-json");
+        const response = await axios.get("https://gamestore-backend-kaxi.onrender.com/api/store");
         console.log("Fetched products:", response.data);
         setProductPlans(response.data);
       } catch (error) {
@@ -27,7 +27,7 @@ const Store = () => {
       useEffect(() => {
         (async () => {
           const response = await axios.get(
-            "https://gamestore-backend-kaxi.onrender.com/api/products-json"
+           "ttps://gamestore-backend-kaxi.onrender.com/api/store"
           );
           setProductPlans(response.data);
         })();
@@ -63,7 +63,7 @@ const Store = () => {
               key={productPlan.name}
               _id={productPlan._id}
               name={productPlan.name}
-              price={ProductPlan.price}
+              price={productPlan.price}
               img_name={productPlan.img_name}
               />
           ))};

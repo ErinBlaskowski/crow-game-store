@@ -2,26 +2,12 @@ import "./dialog.css";
 import React, { useState } from "react";
 
 const EditProduct = (props) => {
-  const [inputs, setInputs] = useState({
-    _id: props._id,
-    name: props.name,
-    price: props.price,
-    prev_img: props.img_name,
-  });
-
-  const handleChange = (event) => {
-    const name = event.target.name;
-    const value = event.target.value;
-    setInputs((values) => ({ ...values, [name]: value }));
-  };
-
-  const handleImageChange = (event) => {
-    const name = event.target.name;
-    const value = event.target.files[0];
-    setInputs((values) => ({ ...values, [name]: value }));
-  };
-
   const [result, setResult] = useState("");
+  const [prevSrc, setPrevSrc] = useState("http://localhost:3000" + props.img_name);
+
+  const uploadImage = (event) => {
+    setPrevSrc(URL.createObjectURL(event.target.files[0]));
+  }
 
   const onSubmit = async (event) => {
     event.preventDefault();
@@ -29,7 +15,7 @@ const EditProduct = (props) => {
     const formData = new FormData(event.target);
 
     const response = await fetch(
-      `https://gamestore-backend-kaxi.onrender.com/api/products-json/${props._id}`,
+      `https://gamestore-backend-kaxi.onrender.com/api/store/${props._id}`,
       {
         method: "PUT",
         body: formData,
@@ -65,8 +51,7 @@ const EditProduct = (props) => {
                 type="text"
                 id="name"
                 name="name"
-                value={inputs.name || ""}
-                onChange={handleChange}
+                defaultValue={props.name}
                 required
               />
             </p>
@@ -76,37 +61,25 @@ const EditProduct = (props) => {
                 type="number"
                 id="price"
                 name="price"
-                value={inputs.size || ""}
-                onChange={handleChange}
+                defaultValue={props.price}
                 required
               />
             </p>
 
             <section className="columns">
-              <p id="img-prev-section">
-                <img
-                  id="img-prev"
-                  src={
-                    inputs.img != null
-                      ? URL.createObjectURL(inputs.img)
-                      : inputs.prev_img != null
-                      ? `https://gamestore-backend-kaxi.onrender.com/${inputs.prev_img}`
-                      : ""
-                  }
-                  alt=""
-                />
-              </p>
-              <p id="img-upload">
-                <label htmlFor="img">Upload Image:</label>
-                <input
-                  type="file"
-                  id="img"
-                  name="img"
-                  onChange={handleImageChange}
-                  accept="image/*"
-                />
-              </p>
-            </section>
+                    <div>
+                        <p id="img-prev-section">
+                            {prevSrc!=""?
+                            (<img id="img-prev" src={prevSrc}></img>):
+                            ("")
+                            }
+                        </p>
+                    </div>
+                    <p id="img-upload">
+                        <label htmlFor="img">Upload Image:</label>
+                        <input type="file" id="img_name" name="img" accept="image/*" onChange={uploadImage} />
+                    </p>
+                </section>
             <p>
               <button type="submit">Submit</button>
             </p>

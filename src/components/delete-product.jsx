@@ -6,7 +6,7 @@ const DeleteProduct = (props) => {
 
   const deleteProductPlan = async (event) => {
     const response = await fetch(
-      `https://gamestore-backend-kaxi.onrender.com/api/products-json/${props._id}`,
+      `https://gamestore-backend-kaxi.onrender.com/api/store/${props._id}`,
       {
         method: "DELETE",
       }
