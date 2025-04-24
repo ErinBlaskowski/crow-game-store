@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/crow-game-store/static/css/main.332290be.css",
-    "main.js": "/crow-game-store/static/js/main.0da2447b.js",
+    "main.js": "/crow-game-store/static/js/main.5ac3d68e.js",
     "static/media/SetOfEightPuzzles.jpeg": "/crow-game-store/static/media/SetOfEightPuzzles.96f578f5f55146b4cfc2.jpeg",
     "static/media/DiceTrayGame.png": "/crow-game-store/static/media/DiceTrayGame.844910785a562cadc9f0.png",
     "static/media/Product.png": "/crow-game-store/static/media/Product.ff8f0021c76d7ae1c41e.png",
@@ -14,10 +14,10 @@
     "static/media/DiceSet.png": "/crow-game-store/static/media/DiceSet.9900a6e72042e4bf6ad2.png",
     "index.html": "/crow-game-store/index.html",
     "main.332290be.css.map": "/crow-game-store/static/css/main.332290be.css.map",
-    "main.0da2447b.js.map": "/crow-game-store/static/js/main.0da2447b.js.map"
+    "main.5ac3d68e.js.map": "/crow-game-store/static/js/main.5ac3d68e.js.map"
   },
   "entrypoints": [
     "static/css/main.332290be.css",
-    "static/js/main.0da2447b.js"
+    "static/js/main.5ac3d68e.js"
   ]
 }
