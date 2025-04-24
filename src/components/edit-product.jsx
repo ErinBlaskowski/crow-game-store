@@ -3,7 +3,7 @@ import React, { useState } from "react";
 
 const EditProduct = (props) => {
   const [result, setResult] = useState("");
-  const [prevSrc, setPrevSrc] = useState("http://localhost:3000" + props.img_name);
+  const [prevSrc, setPrevSrc] = useState("https://gamestore-backend-kaxi.onrender.com" + props.img_name);
 
   const uploadImage = (event) => {
     setPrevSrc(URL.createObjectURL(event.target.files[0]));
