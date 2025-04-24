@@ -12,7 +12,8 @@ const Store = () => {
   useEffect(() => {
     (async () => {
       try {
-        const response = await axios.get("https://gamestore-backend-kaxi.onrender.com/api/store");
+        // link - https://gamestore-backend-kaxi.onrender.com
+        const response = await axios.get("https://gamestore-backend-kaxi.onrender.com");
         console.log("Fetched products:", response.data);
         setProductPlans(response.data);
       } catch (error) {
@@ -27,7 +28,7 @@ const Store = () => {
       useEffect(() => {
         (async () => {
           const response = await axios.get(
-           "ttps://gamestore-backend-kaxi.onrender.com/api/store"
+           "https://gamestore-backend-kaxi.onrender.com/api/store"
           );
           setProductPlans(response.data);
         })();

@@ -14,7 +14,6 @@ const AddProduct = (props) => {
     event.preventDefault();
     setResult("Sending....");
     const formData = new FormData(event.target);
-
     const response = await fetch("https://gamestore-backend-kaxi.onrender.com/api/store", {
       method: "POST",
       body: formData,
